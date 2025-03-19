@@ -120,17 +120,6 @@
 
     document.body.appendChild(script);
 
-
-    window.addEventListener("message", function (event) {
-      let data = event.data;
-      console.log("Received data from React Native:", data);
-
-      // Send data to Unity
-      if (typeof unityInstance !== "undefined" && unityInstance.SendMessage) {
-        unityInstance.SendMessage("WebGLBridge", "ReceiveMessage", data);
-      }
-    });
-
   </script>
 </body>
 
